@@ -1,6 +1,8 @@
+import { useState } from "react";
 import Cart from "./Header/Cart";
 function Header() {
   const menuItems:string[] = ["Collections", "Men", "Women", "About", "Contact"];
+  const [profilePicClicked,setProfilePicClicked] = useState<boolean>(false);
   return (
     <>
       <div className="flex justify-between  lg:w-[90%] w-full h-[50px] mt-[70px] pb-[30px] border-[#E4E9F2] border-b">
@@ -27,9 +29,10 @@ function Header() {
             src="public/image-avatar.png"
             alt="image-avatar"
             className="lg:w-[50px] lg:h-[50px] w-[24px] h-[24px] cursor-pointer border hover:border-[#FF7E1B] rounded-[50%]"
+            onClick={()=> setProfilePicClicked(prev => !prev)}
           />
         </div>
-        <Cart messege="Your cart is empty" />
+        {profilePicClicked && <Cart messege="Your cart is empty" />}
       </div>
     </>
   );
