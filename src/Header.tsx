@@ -24,6 +24,7 @@ function Header() {
             src="public/icon-cart.svg"
             alt="icon-cart"
             className="w-[21.82px] h-[20px] cursor-pointer"
+            onClick={()=> setProfilePicClicked(prev => !prev)}
           />
           <img
             src="public/image-avatar.png"
