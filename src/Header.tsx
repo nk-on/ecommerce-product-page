@@ -1,3 +1,4 @@
+import Cart from "./Header/Cart";
 function Header() {
   const menuItems:string[] = ["Collections", "Men", "Women", "About", "Contact"];
   return (
@@ -25,9 +26,10 @@ function Header() {
           <img
             src="public/image-avatar.png"
             alt="image-avatar"
-            className="lg:w-[50px] lg:h-[50px] w-[24px] h-[24px] cursor-pointer"
+            className="lg:w-[50px] lg:h-[50px] w-[24px] h-[24px] cursor-pointer border hover:border-[#FF7E1B] rounded-[50%]"
           />
         </div>
+        <Cart />
       </div>
     </>
   );
