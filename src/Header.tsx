@@ -29,7 +29,7 @@ function Header() {
             className="lg:w-[50px] lg:h-[50px] w-[24px] h-[24px] cursor-pointer border hover:border-[#FF7E1B] rounded-[50%]"
           />
         </div>
-        <Cart />
+        <Cart messege="Your cart is empty" />
       </div>
     </>
   );
