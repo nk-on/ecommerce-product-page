@@ -1,41 +1,6 @@
 import { useState } from "react";
-
-interface photoProps {
-  url: string;
-  urlThumbNail: string;
-  setMainImage: React.Dispatch<React.SetStateAction<string>>;
-}
-const photos = [
-  {
-    id: 0,
-    photo: "public/image-product-1.jpg",
-    photoThumbnail: "public/image-product-1-thumbnail.jpg",
-  },
-  {
-    id: 1,
-    photo: "public/image-product-2.jpg",
-    photoThumbnail: "public/image-product-2-thumbnail.jpg",
-  },
-  {
-    id: 2,
-    photo: "public/image-product-3.jpg",
-    photoThumbnail: "public/image-product-3-thumbnail.jpg",
-  },
-  {
-    id: 3,
-    photo: "public/image-product-4.jpg",
-    photoThumbnail: "public/image-product-4-thumbnail.jpg",
-  },
-];
-function Photo({ url, urlThumbNail, setMainImage }: photoProps) {
-  return (
-    <div
-      className={` w-[88px] h-[88px] cursor-pointer rounded-[10px] border-[2px] hover:border-[#FF7E1B]`}
-      style={{ background: `url(${urlThumbNail})`, backgroundSize: "cover" }}
-      onClick={() => setMainImage(url)}
-    ></div>
-  );
-}
+import photos from "./photos";
+import Photo from "./Photo";
 function PhotoCarousel() {
   const [mainImage, setMainImage] = useState<string>("public/image-product-1.jpg");
   return (
