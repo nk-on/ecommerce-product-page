@@ -30,7 +30,7 @@ const photos = [
 function Photo({ url, urlThumbNail, setMainImage }: photoProps) {
   return (
     <div
-      className={` w-[88px] h-[88px] cursor-pointer rounded-[10px] hover:gradient-overlay`}
+      className={` w-[88px] h-[88px] cursor-pointer rounded-[10px] border-[2px] hover:border-[#FF7E1B]`}
       style={{ background: `url(${urlThumbNail})`, backgroundSize: "cover" }}
       onClick={() => setMainImage(url)}
     ></div>
