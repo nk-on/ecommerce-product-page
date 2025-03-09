@@ -1,6 +1,8 @@
 import { useState } from "react";
 import photos from "./photos";
 import Photo from "./Photo";
+import Button from "../Header/Button";
+import buttons from "./Buttons";
 function PhotoCarousel() {
   const [mainImage, setMainImage] = useState<string>("public/image-product-1.jpg");
   return (
@@ -14,12 +16,9 @@ function PhotoCarousel() {
             backgroundPosition: "center",
           }}
         >
-          <div className="lg:w-[56px] lg:h-[56px] w-[40px] h-[40px] bg-[#FFFF] absolute left-[90%] top-[50%]   lg:hidden  rounded-[50%] flex justify-center items-center cursor-pointer ">
-            <img src="public/icon-next.svg" ></img>
-          </div>
-          <div className="lg:w-[56px] lg:h-[56px] w-[40px] h-[40px] bg-[#FFFF] absolute top-[50%]  lg:hidden flex justify-center items-center rounded-[50%] cursor-pointer ">
-            <img src="public/icon-previous.svg"></img>
-          </div>
+          {
+            buttons.map(button => <Button url={button.url} left={button.left} top = {button.top} />)
+          }
         </div>
         <div className="lg:flex justify-between hidden ">
           {photos.map((photo) => (
