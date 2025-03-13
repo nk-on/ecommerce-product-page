@@ -7,8 +7,10 @@ interface OverLayProps {
   setMainImage: React.Dispatch<React.SetStateAction<string>>;
 }
 function OverLay({ mainImage, setMainImage }: OverLayProps) {
+  const {setExpanded} = useContext(OverlayContext)
   return (
     <div className="hidden fixed w-full h-full top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 z-20 cursor-pointer lg:flex flex-col justify-center items-center">
+      <img src="public/icon-close.svg" className="ml-[37%]" onClick={()=> setExpanded(false)}></img>
       <img src={`${mainImage}`} className="w-[550px] h-[550px] rounded-[15px]"></img>
       <div className="lg:flex justify-between hidden ">
         {photos.map((photo) => (
