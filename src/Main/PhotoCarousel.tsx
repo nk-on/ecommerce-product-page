@@ -9,10 +9,9 @@ import OverLay from "./Overlay";
 function PhotoCarousel() {
   const [mainImage, setMainImage] = useState<string>("public/image-product-1.jpg");
   const {expanded,setExpanded} = useContext(OverlayContext);
-  console.log(expanded)
   return (
     <>
-      {expanded && <OverLay />}
+      {expanded && <OverLay mainImage = {mainImage} setMainImage = {setMainImage} />}
       {expanded}
       <div className=" flex flex-col gap-[20px] lg:mt-[50px] lg:ml-[40px] lg:w-[445px] lg:h-[445px]">
         <div
