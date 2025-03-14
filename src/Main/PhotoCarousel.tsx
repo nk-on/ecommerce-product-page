@@ -14,7 +14,7 @@ function PhotoCarousel() {
       setIsMobile(false);
     }
   }
-  const [mainImage, setMainImage] = useState<string>("public/image-product-1.jpg");
+  const {mainImage, setMainImage} = useContext(OverlayContext)
   const [isMobile,setIsMobile] = useState<boolean>(window.innerWidth < 425);
   const {expanded,setExpanded} = useContext(OverlayContext);
   useEffect(()=>{
@@ -22,7 +22,7 @@ function PhotoCarousel() {
   })
   return (
     <>
-      {expanded && <OverLay mainImage = {mainImage} setMainImage = {setMainImage} />}
+      {expanded && <OverLay />}
       {expanded}
       <div className=" flex flex-col gap-[20px] lg:mt-[50px] lg:ml-[40px] lg:w-[445px] lg:h-[445px]">
         <div
