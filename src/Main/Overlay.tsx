@@ -15,7 +15,7 @@ function OverLay({ mainImage, setMainImage }: OverLayProps) {
         className=' w-[20px] h-[20px] ml-[35%]'
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        onClick={()=> setExpanded(true)}
+        onClick={()=> setExpanded(false)}
         style={{
           backgroundImage:hovered ? 'url(public/IconClose-hovered.svg)' : 'url(public/iconClose.svg)'
         }}
