@@ -1,4 +1,4 @@
-import {  useState } from "react";
+import {  useEffect, useState } from "react";
 import photos from "./photos";
 import Photo from "./Photo";
 import Button from "../Header/Button";
@@ -7,8 +7,19 @@ import { useContext } from "react";
 import OverlayContext from "../Context";
 import OverLay from "./Overlay";
 function PhotoCarousel() {
+  function handleResize(){
+    if(window.innerWidth < 425){
+      setIsMobile(true);
+    }else{
+      setIsMobile(false);
+    }
+  }
   const [mainImage, setMainImage] = useState<string>("public/image-product-1.jpg");
+  const [isMobile,setIsMobile] = useState<boolean>(window.innerWidth < 425);
   const {expanded,setExpanded} = useContext(OverlayContext);
+  useEffect(()=>{
+    window.addEventListener('resize',handleResize)
+  })
   return (
     <>
       {expanded && <OverLay mainImage = {mainImage} setMainImage = {setMainImage} />}
@@ -25,8 +36,8 @@ function PhotoCarousel() {
             setExpanded(!expanded);
           }}
         >
-          {buttons.map((button) => (
-            <Button url={button.url} left={button.left} top={button.top} />
+          {isMobile && buttons.map((button) => (
+            <Button  url={button.url} left={button.left} top={button.top} />
           ))}
         </div>
         <div className="lg:flex justify-between hidden ">
