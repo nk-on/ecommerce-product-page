@@ -21,7 +21,7 @@ function Header() {
         </div>
         <div className="flex justify-between items-center lg:w-[9%] w-[15%] h-full">
         <img
-            src="public/Cart.svg"
+            src="public/Cart-dark.svg"
             alt="icon-cart"
             className="w-[21.82px] h-[20px] cursor-pointer"
             onClick={()=> setProfilePicClicked(prev => !prev)}
