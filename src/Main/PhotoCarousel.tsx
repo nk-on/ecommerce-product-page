@@ -39,6 +39,7 @@ function PhotoCarousel() {
           {isMobile &&
             buttons.map((button, id) => (
               <Button
+                key={id}
                 url={button.url}
                 left={button.left}
                 top={button.top}
