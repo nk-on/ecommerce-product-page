@@ -3,7 +3,8 @@ import { JSX } from "react";
 import reducer from "./reducer";
 import { useReducer } from "react";
 interface State {
-    count: number;
+    photoCount: number,
+    productCount:number
 }
 
 interface overlay {
@@ -19,13 +20,13 @@ const OverlayContext = createContext<overlay >({
     setExpanded:()=>{},
     mainImage:"public/image-product-1.jpg",
     setMainImage:()=>{},
-    state:{count:0},
+    state:{ photoCount:0,productCount:0},
     dispatch:()=>{}
 });
 export function Provider({children}:{children:JSX.Element}){
     const [expanded,setExpanded] = useState<boolean>(false);
     const [mainImage,setMainImage] = useState<string>("public/image-product-1.jpg");
-    const [state, dispatch] = useReducer(reducer, { count: 0 });
+    const [state, dispatch] = useReducer(reducer, { photoCount: 0, productCount: 0});
     return (
         <OverlayContext.Provider value={{expanded,setExpanded,mainImage,setMainImage,state,dispatch}}>
             {children}

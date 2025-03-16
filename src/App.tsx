@@ -1,18 +1,18 @@
-
-import './App.css'
-import Header from './Header'
-import MainPage from './MainPage'
-import { Provider } from './Context'
+import "./App.css";
+import Header from "./Header";
+import MainPage from "./MainPage";
+import { Provider } from "./Context";
 function App() {
-
   return (
-    <>
-     <div className='flex justify-center'>
-       <Header />
-     </div>
-     <Provider><MainPage /></Provider>
-    </>
-  )
+    <Provider>
+      <>
+        <div className="flex justify-center">
+          <Header></Header>
+        </div>
+        <MainPage />
+      </>
+    </Provider>
+  );
 }
 
-export default App
+export default App;

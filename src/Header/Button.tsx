@@ -11,7 +11,7 @@ import photos from "../Main/photos";
 function Button({ url, top, left, status}: ButtonProps) {
   const { setMainImage,dispatch,state } = useContext(OverlayContext);
   useEffect(()=>{
-    setMainImage(photos[state.count].photo)
+    setMainImage(photos[state.photoCount].photo)
   },[state])
   return (
     <div

@@ -1,4 +1,7 @@
+import { useContext } from "react";
+import OverlayContext from "./Context";
 function ProductData() {
+  const {state,dispatch} = useContext(OverlayContext)
   return (
     <>
       <div className="mt-[50px] w-[426px] text-[#000] flex flex-col gap-[20px] ">
@@ -23,17 +26,19 @@ function ProductData() {
               src="public/icon-minus.svg"
               alt="minus"
               className="w-[12px] h-[3.33px] cursor-pointer"
+              onClick={()=> dispatch({type:"Decrease"})}
             ></img>
-            <div>0</div>
+            <div>{state.productCount}</div>
             <img
               src="public/icon-plus.svg"
               alt="+"
               className="w-[12px] h-[13.71px] cursor-pointer"
+              onClick={()=> dispatch({type:"Increase"})}
             />
           </div>
           <button className="w-[272px] h-[56px] bg-[#FF7E1B] rounded-[10px] flex justify-around items-center hover:bg-[#FFAB6A]">
             <img src="public/Cart.svg"></img>{" "}
-            <div className="text-[#FFFF]">Add to cart</div>
+            <div className="text-[#FFFF]" onClick={()=> dispatch({type:"Increase"})}>Add to cart</div>
           </button>
         </div>
       </div>
