@@ -3,6 +3,7 @@ import Cart from "./Header/Cart";
 function Header() {
   const menuItems:string[] = ["Collections", "Men", "Women", "About", "Contact"];
   const [profilePicClicked,setProfilePicClicked] = useState<boolean>(false);
+  console.log(profilePicClicked)
   return (
     <>
       <div className="flex justify-between  lg:w-[90%] w-full h-[50px] mt-[70px] pb-[30px] border-[#E4E9F2] border-b">
