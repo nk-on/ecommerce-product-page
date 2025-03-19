@@ -1,16 +1,19 @@
 import { useContext, useState } from "react";
 import OverlayContext from "./Context";
 import Cart from "./Header/Cart";
+import MobileMenu from "./Header/MobileMenu";
 function Header() {
   const menuItems: string[] = ["Collections", "Men", "Women", "About", "Contact"];
   const [profilePicClicked, setProfilePicClicked] = useState<boolean>(false);
+  const [menuItemClicked, setMenuItemClicked] = useState<boolean>(false);
   const { state } = useContext(OverlayContext);
   return (
     <>
+     {menuItemClicked && <MobileMenu setMenuItemClicked = {setMenuItemClicked} menuItems = {menuItems} />}
       <div className="flex justify-between  lg:w-[90%] w-full h-[50px] mt-[70px] pb-[30px] border-[#E4E9F2] border-b">
         <div>
           <nav className="flex w-[90%] gap-[30px] px-[10px]">
-            <img src="public/icon-menu.svg" alt="menu-icon" className="lg:hidden block" />
+            <img src="public/icon-menu.svg" alt="menu-icon" className="lg:hidden block" onClick={()=> setMenuItemClicked(true)} />
             <img src="public/logo.svg" alt="sneakers" className="w-[137.5px] h-[20px]" />
             <ul className="lg:flex justify-between w-[60%] gap-[30px] hidden">
               {menuItems.map((item) => (
