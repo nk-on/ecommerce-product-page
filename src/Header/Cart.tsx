@@ -2,8 +2,7 @@ import { useContext } from "react";
 import OverlayContext from "../Context";
 
 function Cart({ messege }: { messege: string }) {
-  const { state } = useContext(OverlayContext);
-  console.log(state);
+  const { state, dispatch } = useContext(OverlayContext);
   return (
     <div className="z-10  bg-[#fff] shadow-deep absolute lg:left-[72%] lg:top-[17%] right-[1%] top-[18%] lg:w-[360px] w-[100%] h-[256px] rounded-[10px]">
       <div className="border-[#E4E9F2] border-b h-[20%] flex items-center p-[20px] font-bold">
@@ -20,13 +19,23 @@ function Cart({ messege }: { messege: string }) {
                 />
                 <div>
                   <p>Fall Limited Edition Sneakers</p>
-                  <div >
-                    $125.00 x {state.productCount} <span className="font-bold">${state.productCount * 125}</span>
+                  <div>
+                    $125.00 x {state.productCount}{" "}
+                    <span className="font-bold">${state.productCount * 125}</span>
                   </div>
                 </div>
-                <img src="public/Trashbin.svg"  />
+                <img
+                  src="public/Trashbin.svg"
+                  alt="trashbin"
+                  onClick={() => dispatch({ type: "Empty" })}
+                />
               </div>
-              <button className="w-[90%] bg-[#FF7E1B] h-[56px] rounded-[10px] text-[#fff]">Checkout</button>
+              <button
+                className="w-[90%] bg-[#FF7E1B] h-[56px] rounded-[10px] text-[#fff]"
+                onClick={() => dispatch({ type: "Empty" })}
+              >
+                Checkout
+              </button>
             </div>
           </div>
         ) : (

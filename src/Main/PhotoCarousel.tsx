@@ -23,9 +23,9 @@ function PhotoCarousel() {
   return (
     <>
       {(expanded && !isMobile) && <OverLay />}
-      <div className=" z-0 flex flex-col gap-[20px] lg:mt-[50px] lg:ml-[40px] lg:w-[445px] lg:h-[445px]">
+      <div className=" relative flex flex-col gap-[20px] lg:mt-[50px] lg:ml-[40px] lg:w-[445px] lg:h-[445px]">
         <div
-          className=" z-3 relative lg:w-[100%] lg:h-[140%]  h-[300px] w-[100%] lg:rounded-[15px] cursor-pointer"
+          className=" relative lg:w-[100%] lg:h-[100%]  h-[300px] w-[100%] lg:rounded-[15px] cursor-pointer"
           style={{
             backgroundImage: `url(${mainImage})`,
             backgroundSize: "cover",

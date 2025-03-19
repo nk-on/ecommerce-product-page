@@ -8,7 +8,9 @@ function reducer(state: { photoCount: number,productCount:number }, action: { ty
     case "Increase":
       return {...state,productCount:state.productCount+1};
     case "Decrease":
-      return state.productCount === 0 ? {...state,productCount:0} : {...state,productCount:state.productCount-1}
+      return state.productCount === 0 ? {...state,productCount:0} : {...state,productCount:state.productCount-1};
+    case "Empty":
+      return {...state,productCount:0}
     default:
       return state;
   }
