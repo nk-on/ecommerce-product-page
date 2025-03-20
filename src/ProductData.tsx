@@ -4,7 +4,7 @@ function ProductData() {
   const {state,dispatch} = useContext(OverlayContext)
   return (
     <>
-      <div className="mt-[50px]  text-[#000] flex flex-col gap-[20px] ">
+      <div className="mt-[50px] lg:w-[426px] text-[#000] flex flex-col gap-[20px] ">
         <p className="text-[#FF7E1B]">Sneaker Company</p>
         <h1 className="font-bold text-[44px]">Fall Limited Edition Sneakers</h1>
         <p className="text-[#69707D]">
