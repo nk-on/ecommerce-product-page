@@ -13,7 +13,9 @@ interface overlay {
     mainImage:string,
     setMainImage:React.Dispatch<React.SetStateAction<string>>,
     state:State,
-    dispatch: React.Dispatch<{ type: string }>; 
+    dispatch: React.Dispatch<{ type: string }>,
+    overlayImage:string,
+    setOverLayImage:React.Dispatch<React.SetStateAction<string>>,
 }
 const OverlayContext = createContext<overlay >({
     expanded:false,
@@ -21,14 +23,17 @@ const OverlayContext = createContext<overlay >({
     mainImage:"public/image-product-1.jpg",
     setMainImage:()=>{},
     state:{ photoCount:0,productCount:0},
-    dispatch:()=>{}
+    dispatch:()=>{},
+    overlayImage:"public/image-product-1.jpg",
+    setOverLayImage:()=>{},
 });
 export function Provider({children}:{children:JSX.Element}){
     const [expanded,setExpanded] = useState<boolean>(false);
     const [mainImage,setMainImage] = useState<string>("public/image-product-1.jpg");
+    const [overlayImage,setOverLayImage] = useState(mainImage)
     const [state, dispatch] = useReducer(reducer, { photoCount: 0, productCount: 0});
     return (
-        <OverlayContext.Provider value={{expanded,setExpanded,mainImage,setMainImage,state,dispatch}}>
+        <OverlayContext.Provider value={{expanded,setExpanded,mainImage,setMainImage,state,dispatch,overlayImage,setOverLayImage}}>
             {children}
         </OverlayContext.Provider>
     )

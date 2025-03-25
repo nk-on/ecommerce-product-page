@@ -9,9 +9,13 @@ import OverlayContext from "../Context";
 import photos from "../Main/photos";
 //we should increase count from 0 to photos length
 function Button({ url, top, left, status}: ButtonProps) {
-  const { setMainImage,dispatch,state } = useContext(OverlayContext);
+  const {setMainImage,dispatch,state,expanded,setOverLayImage } = useContext(OverlayContext);
   useEffect(()=>{
-    setMainImage(photos[state.photoCount].photo)
+    if(expanded){
+      setOverLayImage(photos[state.photoCount].photo)
+    }else{
+      setMainImage(photos[state.photoCount].photo)
+    }
   },[state])
   return (
     <div
