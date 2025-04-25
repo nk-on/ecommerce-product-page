@@ -22,7 +22,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./AppScreenshot.png)
+![](public/AppScreenshot.png)
 
 ### Links
 
