@@ -29,7 +29,7 @@ function Header() {
             {state.productCount}
           </div>
           <img
-            src="public/Cart-dark.svg"
+            src="/public/Cart-dark.svg"
             alt="icon-cart"
             className="w-[21.82px] h-[20px] cursor-pointer"
             onClick={() => setProfilePicClicked((prev) => !prev)}
