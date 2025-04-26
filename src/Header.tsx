@@ -35,7 +35,7 @@ function Header() {
             onClick={() => setProfilePicClicked((prev) => !prev)}
           />
           <img
-            src="public/image-avatar.png"
+            src="./image-avatar.png"
             alt="image-avatar"
             className="lg:w-[50px] lg:h-[50px] w-[24px] h-[24px] cursor-pointer border hover:border-[#FF7E1B] rounded-[50%]"
             onClick={() => setProfilePicClicked((prev) => !prev)}
