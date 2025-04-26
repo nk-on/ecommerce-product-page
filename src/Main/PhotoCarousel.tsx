@@ -23,7 +23,7 @@ function PhotoCarousel() {
   return (
     <>
       {(expanded && !isMobile) && <OverLay />}
-      <div className="relative flex flex-col  lg:mt-[50px] lg:ml-[40px] lg:w-[445px] h-[300px] lg:h-[445px]">
+      <div className="relative w-[100%] flex flex-col  lg:mt-[50px] lg:ml-[40px] lg:w-[445px] h-[300px] lg:h-[445px]">
         <div
           className="relative  lg:h-[100%]  h-[300px] lg:rounded-[15px] cursor-pointer"
           style={{
