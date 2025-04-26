@@ -14,7 +14,7 @@ function Cart({ messege }: { messege: string }) {
             <div className="flex flex-col gap-[30px]">
               <div className="flex gap-[15px]">
                 <img
-                  src="public/image-product-1-thumbnail.jpg"
+                  src="./image-product-1-thumbnail.jpg"
                   className="w-[50px] h-[50px]"
                 />
                 <div>
@@ -25,7 +25,7 @@ function Cart({ messege }: { messege: string }) {
                   </div>
                 </div>
                 <img
-                  src="public/Trashbin.svg"
+                  src="./Trashbin.svg"
                   alt="trashbin"
                   onClick={() => dispatch({ type: "Empty" })}
                 />

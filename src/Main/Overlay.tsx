@@ -15,7 +15,7 @@ function OverLay() {
         onMouseLeave={() => setHovered(false)}
         onClick={()=> setExpanded(false)}
         style={{
-          backgroundImage:hovered ? 'url(public/IconClose-hovered.svg)' : 'url(public/iconClose.svg)'
+          backgroundImage:hovered ? 'url(./IconClose-hovered.svg)' : 'url(./iconClose.svg)'
         }}
       >
       </div>
