@@ -7,7 +7,6 @@ interface ButtonProps {
 import { useContext, useEffect } from "react";
 import OverlayContext from "../Context";
 import photos from "../Main/photos";
-//we should increase count from 0 to photos length
 function Button({ url, top, left, status}: ButtonProps) {
   const {setMainImage,dispatch,state,expanded,setOverLayImage } = useContext(OverlayContext);
   useEffect(()=>{
