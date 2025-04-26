@@ -13,14 +13,6 @@ function MobileMenu({ menuItems, setMenuItemClicked }: MobileMenuProps) {
           ))}
         </ul>
       </div>
-      {/* <div className="bg-[#fff] bottom-[10%] top-0 relative  left-0 z-20 h-[100%]  w-[60%]">
-            <img src="public/Icon-close-dark.svg" alt="close-icon" className="absolute ml-[10%] mt-[20%]" onClick={()=> setMenuItemClicked(false)}/>
-            <ul className="flex flex-col ml-[10%] mt-[35%] ">
-                {
-                    menuItems.map((item)=> <li className="font-bold">{item}</li>)
-                }
-            </ul>
-        </div> */}
     </div>
   );
 }
