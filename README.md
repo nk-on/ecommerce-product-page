@@ -7,7 +7,21 @@
 
 ## Overview
 
-- This is an e-commerce product page. user can add to cart shoe based on their choice clicking on the add to cart button after selecting desire number of shoe
+This is a fully responsive E-commerce Product Page where users can explore a stylish shoe product, browse through a photo carousel to view it from different angles, and manage their shopping cart effortlessly.
+
+Users can:
+
+- Select the quantity of shoes they want to purchase using increment/decrement controls.
+
+- Add the selected amount to the cart by clicking the “Add to Cart” button.
+
+- View and manage their cart, including the ability to remove items directly from it.
+
+- Browse product images using a lightbox photo carousel, activated by clicking the main product image (on larger screens).
+
+- Switch images by clicking on thumbnail previews.
+
+- Everything is built using HTML, CSS, and Vanilla JavaScript, with a focus on clean interactivity and a smooth user experience.
 
 ### The challenge
 
