@@ -5,7 +5,7 @@ import OverlayContext from "../Context";
 import Button from "../Header/Button";
 import buttons from "./Buttons";
 function OverLay() {
-  const {overlayImage,  setMainImage, setOverLayImage, setExpanded} = useContext(OverlayContext)
+  const {overlayImage, setOverLayImage, setExpanded} = useContext(OverlayContext)
   const [hovered, setHovered] = useState<boolean>(false);
   return (
     <div className="hidden fixed w-full h-full top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 z-20 cursor-pointer lg:flex flex-col justify-center items-center">
