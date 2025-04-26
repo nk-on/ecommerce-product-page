@@ -29,7 +29,7 @@ const OverlayContext = createContext<overlay >({
 });
 export function Provider({children}:{children:JSX.Element}){
     const [expanded,setExpanded] = useState<boolean>(false);
-    const [mainImage,setMainImage] = useState<string>("public/image-product-1.jpg");
+    const [mainImage,setMainImage] = useState<string>("./image-product-1.jpg");
     const [overlayImage,setOverLayImage] = useState(mainImage)
     const [state, dispatch] = useReducer(reducer, { photoCount: 0, productCount: 0});
     return (

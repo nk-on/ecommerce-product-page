@@ -23,21 +23,21 @@ function ProductData() {
         <div className="flex gap-[5px]">
           <div className="w-[157px] h-[56px] bg-[#F6F8FD] rounded-[10px] flex justify-around items-center">
             <img
-              src="public/icon-minus.svg"
+              src="./icon-minus.svg"
               alt="minus"
               className="w-[12px] h-[3.33px] cursor-pointer"
               onClick={()=> dispatch({type:"Decrease"})}
             ></img>
             <div>{state.productCount}</div>
             <img
-              src="public/icon-plus.svg"
+              src="./icon-plus.svg"
               alt="+"
               className="w-[12px] h-[13.71px] cursor-pointer"
               onClick={()=> dispatch({type:"Increase"})}
             />
           </div>
           <button className="w-[272px] h-[56px] bg-[#FF7E1B] rounded-[10px] flex justify-around items-center hover:bg-[#FFAB6A]">
-            <img src="public/Cart.svg"></img>{" "}
+            <img src="./Cart.svg"></img>{" "}
             <div className="text-[#FFFF]" onClick={()=> dispatch({type:"Increase"})}>Add to cart</div>
           </button>
         </div>
