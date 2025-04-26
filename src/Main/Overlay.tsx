@@ -5,7 +5,7 @@ import OverlayContext from "../Context";
 import Button from "../Header/Button";
 import buttons from "./Buttons";
 function OverLay() {
-  const {mainImage, setMainImage, setExpanded} = useContext(OverlayContext)
+  const {overlayImage,  setMainImage, setOverLayImage, setExpanded} = useContext(OverlayContext)
   const [hovered, setHovered] = useState<boolean>(false);
   return (
     <div className="hidden fixed w-full h-full top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 z-20 cursor-pointer lg:flex flex-col justify-center items-center">
@@ -19,7 +19,7 @@ function OverLay() {
         }}
       >
       </div>
-      <div className="relative w-[550px] h-[550px] rounded-[15px]" style={{background:`url(${mainImage})`,backgroundSize:'cover'}}>
+      <div className="relative w-[550px] h-[550px] rounded-[15px]" style={{background:`url(${overlayImage})`,backgroundSize:'cover'}}>
       {buttons.map(button =><Button url={button.url} left={button.left} top={button.top} status = {button.status} />)}
       </div>
       <div className="lg:flex justify-between hidden ">
@@ -27,7 +27,7 @@ function OverLay() {
           <Photo
             url={photo.photo}
             urlThumbNail={photo.photoThumbnail}
-            setMainImage={setMainImage}
+            setMainImage={setOverLayImage}
             key={photo.id}
           />
         ))}
