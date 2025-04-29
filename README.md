@@ -40,8 +40,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [solution here](https://github.com/nasim67reja/Ecommerce.github.io)
-- Live Site URL: [ live site here](https://nasim67reja.github.io/Ecommerce.github.io/)
+- Live Site URL: [ live site here](https://ecommerce-product-page-eight-chi.vercel.app/)
 
 ### Built with
 - React
