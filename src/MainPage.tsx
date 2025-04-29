@@ -3,7 +3,7 @@ import ProductData from "./ProductData";
 function MainPage() {
   return (
     <>
-        <div className="block lg:flex justify-between lg:mr-[20%]">
+        <div className="block lg:flex justify-between lg:mr-[10%] w-[75%]">
         <PhotoCarousel />
         <ProductData />
         </div>

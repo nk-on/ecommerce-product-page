@@ -9,7 +9,9 @@ function App() {
         <div className="flex justify-center">
           <Header></Header>
         </div>
-        <MainPage />
+        <div className="w-[100%] h-[100%] flex  justify-center items-center">
+          <MainPage />
+        </div>
       </>
     </Provider>
   );
